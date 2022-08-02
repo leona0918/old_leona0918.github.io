@@ -1,6 +1,9 @@
 ---
 title: "Efficient-Terminal"
 date: 2022-07-31
+tags:
+- OS
+- Ubuntu
 ---
 
 (pre) what is shell (a capture from bird's linux), what's the default shell come with ubuntu, what are the common shells most widely used today.
