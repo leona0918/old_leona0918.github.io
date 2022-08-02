@@ -16,7 +16,15 @@ date: 2022-07-31
 
 ## Install and configure oh-my-zsh
 
-## Install exa as replacement of ls
+## Install exa as replacement of ls 
+Official site of [exa](https://the.exa.website/), as described in this [Issue](https://github.com/ogham/exa/issues/783), it's not available in Ubuntu 20.04 repository. But we could download the binary and install it manually.(Just put binary, manual and auto-completation setting file to correct path)
+From above offical site download zip package, and it contain 3 folders for binary, manual, and auto-completation setting.
+
+
 ### Install download binary (where to put binary file, manual file, and config auto completion)
 
+ - binary -->  /usr/bin
+ - manual -->  /usr/share/man/man1 (or man2...5)
+ - auto-complete setting for shell bash ---> /usr/share/bash-completion/completions
+ - auto-complete setting for shell zsh ---> /usr/local/share/zsh/site-functions, and rename the file to '_exa'
 
