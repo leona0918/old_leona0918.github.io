@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-07T11:19:37+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Leona’s homepage</title><subtitle>Note for base knowledge like linux os, c++, math, AD, etc.</subtitle><entry><title type="html">Efficient-Terminal</title><link href="http://localhost:4000/2022/07/31/Efficient-Terminal.html" rel="alternate" type="text/html" title="Efficient-Terminal" /><published>2022-07-31T00:00:00+08:00</published><updated>2022-07-31T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/31/Efficient-Terminal</id><content type="html" xml:base="http://localhost:4000/2022/07/31/Efficient-Terminal.html"><![CDATA[<p>(pre) what is shell (a capture from bird’s linux), what’s the default shell come with ubuntu, what are the common shells most widely used today.</p>
+
+<h2 id="switch-from-bashdefault-shell-to-zsh">Switch from bash(default shell) to zsh</h2>
+<p>if cannot change the default shell by command line</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> chsh -s $(which zsh)
+</code></pre></div></div>
+<p>And it return ‘user does not exist in /etc/passwd’, you could use ‘X-terminal-emulator’, and configure a shell in ‘Terminator Preferences’ –&gt; ‘Profiles’–&gt;’Command’–&gt; Check ‘Run a custom command instead of my shell’–&gt;’Custom comand:/usr/bin/zsh’</p>
+
+<h2 id="install-zsh">Install zsh</h2>
+
+<h2 id="install-and-configure-oh-my-zsh">Install and configure oh-my-zsh</h2>
+
+<h2 id="install-exa-as-replacement-of-ls">Install exa as replacement of ls</h2>
+<p>Official site of <a href="https://the.exa.website/">exa</a>, as described in this <a href="https://github.com/ogham/exa/issues/783">Issue</a>, it’s not available in Ubuntu 20.04 repository. But we could download the binary and install it manually.(Just put binary, manual and auto-completation setting file to correct path)
+From above offical site download zip package, and it contain 3 folders for binary, manual, and auto-completation setting.</p>
+
+<h3 id="install-download-binary-where-to-put-binary-file-manual-file-and-config-auto-completion">Install download binary (where to put binary file, manual file, and config auto completion)</h3>
+
+<ul>
+  <li>binary –&gt;  /usr/bin</li>
+  <li>manual –&gt;  /usr/share/man/man1 (or man2…5)</li>
+  <li>auto-complete setting for shell bash —&gt; /usr/share/bash-completion/completions</li>
+  <li>auto-complete setting for shell zsh —&gt; /usr/local/share/zsh/site-functions, and rename the file to ‘_exa’</li>
+</ul>]]></content><author><name></name></author><category term="OS" /><category term="Ubuntu" /><summary type="html"><![CDATA[(pre) what is shell (a capture from bird’s linux), what’s the default shell come with ubuntu, what are the common shells most widely used today.]]></summary></entry><entry><title type="html">Clothid-In-Road-Design</title><link href="http://localhost:4000/2022/07/31/Why-Clothid.html" rel="alternate" type="text/html" title="Clothid-In-Road-Design" /><published>2022-07-31T00:00:00+08:00</published><updated>2022-07-31T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/31/Why-Clothid</id><content type="html" xml:base="http://localhost:4000/2022/07/31/Why-Clothid.html"><![CDATA[<h2 id="what-is-clothid">What Is Clothid</h2>
+
+<h2 id="property-of-clothid">Property of Clothid</h2>
+
+<h2 id="presentationfunction-of-clothid">Presentation/Function of Clothid</h2>
+
+<h2 id="references">References</h2>]]></content><author><name></name></author><summary type="html"><![CDATA[What Is Clothid]]></summary></entry></feed>
