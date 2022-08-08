@@ -1,2 +1,5 @@
-#Ingore local jekyll cache files
-.jekyll-cache 
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
