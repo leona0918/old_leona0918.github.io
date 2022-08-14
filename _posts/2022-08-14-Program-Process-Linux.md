@@ -64,10 +64,10 @@ Suppose there is only one terminal, commands can run in
 - Start a command in background , command end with `&`. 
     Combine with data redirect , to save output a log file.
         
-        ```bash
-        # zip folder /etc, any output would be saved to log file /tmp/log.txt, and run in background
-        tar -zpcf /tmp/etc.tar.gz /etc > /tmp/log.txt 2>&1 &
-        ```
+    ```bash
+    # zip folder /etc, any output would be saved to log file /tmp/log.txt, and run in background
+    tar -zpcf /tmp/etc.tar.gz /etc > /tmp/log.txt 2>&1 &
+    ```
 
 - Pause current job and send to background `ctrl + z`
 
@@ -90,32 +90,69 @@ Suppose there is only one terminal, commands can run in
     ```
 
 
-Sample : put 2 jobs to background vi , and find in sequence. And get vi to foreground.
+Sample : 
+Put 2 jobs to background vi , and find in sequence. And get vi to foreground.
 
-    ```bash
-    # put 2 jobs to backround
-    vi ~/.bashrc
-    ctrl +z
-    find / -pirnt
-    ctrl +z
-    ```
-    Output of `jobs l`
+```bash
+# put 2 jobs to backround
+vi ~/.bashrc
+ctrl +z
+find / -pirnt
+ctrl +z
+```
 
-    ```
-    # + means the last one put to background, - means the second last put to background
-    [1]- Stopped    vi ~/.bashrc
-    [2]+ Stopped    find / -pirnt   
-    ```
-    Get vi to foreground again
-    ```bash
-    # -1 is the job number
-    fg -1
-    ```
+Output of `jobs l`
+
+```bash
+# + means the last one put to background, - means the second last put to background
+[1]- Stopped    vi ~/.bashrc
+[2]+ Stopped    find / -pirnt   
+```
+    
+Get vi to foreground again
+
+```bash
+# %1 is the job number
+fg 1
+```
 
 ### Offline job management
 Previous meaned forground/background is bounded to terminal, not system background job, if you remotely ssh to a linux system, start a background job , but exit remote login before the job ends, then job would also end. If you want the job to continue after you logout, then try `nohup`
 
- 
+
+## 16.3 Process Management
+
+Check current process status statically.
+
+   > ```bash
+   > # prcesses only related with current shell
+   > ps -l
+   > # including system process
+   > ps aux
+   > ```
+
+Check process status dynamically.
+    `top`, `htop`, `pstree`    
+
+Control process by send a signal, check all signals with `kill -l`.
+
+`kill -signal %jobnumber` or `kill -signal PID`
+If want to send signal to a process, need to konw the job number or PID, so command `kill` normally combined with `ps`.
+
+Or use `killall` and command name.
+
+`killall -i -9 bash`
+
+`free -h` Check system memory resource(-h system decide memory unit)
+
+`uname -a` info about system and kernal version
+
+## 16.4 Special file and process
+
+`/proc` , all processes are in memory, and memory data is writen to directory `/proc`.
+`/proc/PID`, so systemd's data is saved to `/proc/1/`, as systemd is the first process when OS started, its PID is 1.
+
+
 
 
 
